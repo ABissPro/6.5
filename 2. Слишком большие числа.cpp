@@ -10,9 +10,15 @@ int main()
     //посчитать количество цифр в числе
     int count = 0;
 
-    while (number != 0) {
-        number /= 10;
-        ++count;
+    if (number == 0) {
+    count = 1;
+    //std::cout << "Количество цифр в числе: " << count;
+    }
+    else {
+        while (number != 0) {
+            number /= 10;
+            ++count;
+        }
     }
     
     std::cout << "Количество цифр в числе: " << count;
