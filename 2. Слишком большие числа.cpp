@@ -12,7 +12,6 @@ int main()
 
     if (number == 0) {
     count = 1;
-    //std::cout << "Количество цифр в числе: " << count;
     }
     else {
         while (number != 0) {
