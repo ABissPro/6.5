@@ -11,24 +11,19 @@ int main()
     int leftSum = 0;
     int rightSum = 0;
     int oneDigit;
-    int current;
 
-    
-    while (number != 0) {
-        oneDigit = number % 10;
-        rightSum += oneDigit;
-        number /= 10;
-        if (number < 1000) break;
-        current = number;
-    }
+        while (number != 0) {
+            oneDigit = number % 10;
+            if (number > 1000) {
+                rightSum += oneDigit;
+            }
+            else {
+                leftSum += oneDigit;
+            }
+            number /= 10;
+        }
+
     std::cout << "Сумма цифр справа: " << rightSum << "\n";
-   
-    while (number != 0) {
-        oneDigit = number % 10;
-        leftSum += oneDigit;
-        number /= 10;
-        current = number;
-    }
     std::cout << "Сумма цифр слева: " << leftSum << "\n";
 
     if (rightSum == leftSum) {
