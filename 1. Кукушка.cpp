@@ -9,10 +9,15 @@ int main()
     std::cout << "Который час? Введите число до 12 включительно: ";
     std::cin >> hour;
 
-    int count = 0;
-    while (count != hour) {
-        std::cout << "Ку-ку!\n";
-        ++count;
+    if (hour < 0 || hour > 12) {
+    std::cout << "Введено некорректное значение!";
+    }
+    else {
+        int count = 0;
+        while (count != hour) {
+            std::cout << "Ку-ку!\n";
+            ++count;
+        }
     }
 }
 
